@@ -5,14 +5,24 @@ A small PySide6 GUI for editing Linux desktop configs - Waybar's
 form fields instead of hand-editing JSON/XML, with a one-click raw code
 editor for anything the structured view can't handle.
 
+## Install
+
+Needs Python 3 and PySide6.
+
+```sh
+# Arch:
+sudo pacman -S pyside6
+
+# Other distros / no system package:
+pip install --user PySide6
+```
+
 ## Run
 
 ```sh
 ./main.py                    # opens empty, use the sidebar to pick a file
 ./main.py ~/.config/waybar/config.jsonc   # opens directly into that file
 ```
-
-Requires `pyside6` (already installed on this system via pacman: `extra/pyside6`).
 
 ## What it does
 
@@ -42,7 +52,8 @@ Requires `pyside6` (already installed on this system via pacman: `extra/pyside6`
 ## Files
 
 - `jsonc.py` - comment-preserving JSONC parser/editor model (hand-written,
-  no dependency; tracked/tested against the real config on this machine).
+  no dependency; tested against a real Waybar config for byte-identical
+  round-tripping).
 - `xmlmodel.py` - thin ElementTree wrapper with namespace-prefix and
   leading-comment preservation.
 - `registry.py` - the list of auto-detected config shortcuts.
