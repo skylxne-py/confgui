@@ -5,6 +5,8 @@ A small PySide6 GUI for editing Linux desktop configs - Waybar's
 form fields instead of hand-editing JSON/XML, with a one-click raw code
 editor for anything the structured view can't handle.
 
+![Screenshot of confgui showing a Waybar config.jsonc loaded as a tree](screenshot.png)
+
 ## Install
 
 Needs Python 3 and PySide6.
